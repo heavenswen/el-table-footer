@@ -6,7 +6,7 @@ import App from './App'
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import ElTableFooter from 'el-table-footer'
+import ElTableFooter from '../packages/index'
 
 Vue.use(ElTableFooter)
 Vue.use(ElementUi)

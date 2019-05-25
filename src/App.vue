@@ -8,23 +8,29 @@
       <el-table-column
         prop="id"
         label="ID"
-        width="180">
+        width="400"
+        fixed>
       </el-table-column>
       <el-table-column
         prop="name"
-        label="姓名">
+        label="姓名"
+        width="400">
       </el-table-column>
       <el-table-column
         prop="amount1"
-        label="数值 1">
+        label="数值 1"
+        width="400">
       </el-table-column>
       <el-table-column
         prop="amount2"
-        label="数值 2">
+        label="数值 2"
+        width="400">
       </el-table-column>
       <el-table-column
         prop="amount3"
-        label="数值 3">
+        label="数值 3"
+        width="400"
+        fixed="right">
       </el-table-column>
     </el-table>
     <el-table-footer :data="footerData" ref="tableFooter"></el-table-footer>
@@ -33,6 +39,11 @@
 
 <script>
   export default {
+    computed: {
+      footerData () {
+        return [this.summary1, this.summary2]
+      }
+    },
     data () {
       return {
         tableData: [{
@@ -66,21 +77,22 @@
           amount2: '4.1',
           amount3: 15
         }],
-        footerData: [{
+        summary1: {
           label: '合计',
           data: {
             amount1: 13414,
             amount2: 13414,
             amount3: 13414
           }
-        }, {
+        },
+        summary2: {
           label: '总计',
           data: {
             amount1: 13414,
             amount2: 13414,
             amount3: 13414
           }
-        }]
+        }
       }
     },
     mounted () {
