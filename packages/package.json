@@ -1,0 +1,20 @@
+{
+  "name": "el-table-footer",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckang1229/el-table-footer"
+  },
+  "author": "",
+  "license": "ISC",
+  "_from": "el-table-footer@1.0.2",
+  "_resolved": "https://registry.npm.taobao.org/el-table-footer/download/el-table-footer-1.0.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fel-table-footer%2Fdownload%2Fel-table-footer-1.0.2.tgz"
+}
