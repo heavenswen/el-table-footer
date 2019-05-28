@@ -4,7 +4,7 @@
 
 ![image](./demo.png)
 
-[点击查看在线demo](https://ckang1229.github.io/el-table-footer/dist/)
+[点击查看在线demo](https://code-farmer-i.github.io/el-table-footer/dist/)
 
 ## Install
 ```shell
