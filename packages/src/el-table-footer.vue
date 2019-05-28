@@ -1,9 +1,12 @@
 <template>
   <div
     class="el-table-footer-wrapper"
-    :class="[table && table.layout.scrollX ? `is-scrolling-${table.scrollPosition}` : 'is-scrolling-none', {
-      'el-table-footer-wrapper--border': table && table.border
-    }]"
+    :class="[
+      table && table.layout.scrollX ? `is-scrolling-${table.scrollPosition}` : 'is-scrolling-none',
+      table && table.tableSize ?  `el-table-footer--${table.tableSize}` : '',
+      {
+        'el-table-footer-wrapper--border': table && table.border
+      }]"
   >
     <div
       v-if="fixedColumns.length > 0"
@@ -102,7 +105,7 @@ export default {
 }
 </script>
 
-<style>
+<style type="text/scss" lang="scss">
   .el-table-footer-wrapper {
     position: relative;
     overflow: hidden;
@@ -126,7 +129,7 @@ export default {
   }
   .el-table-footer-wrapper td,
   .el-table-footer-wrapper th {
-    padding: 8px 0;
+    padding: 12px 0;
     min-width: 0;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -134,6 +137,16 @@ export default {
     position: relative;
     text-align: left;
     font-size: 12px;
+  }
+  .el-table-footer-wrapper.el-table-footer--small td,
+  .el-table-footer-wrapper.el-table-footer--small th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .el-table-footer-wrapper.el-table-footer--mini td,
+  .el-table-footer-wrapper.el-table-footer--mini th {
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   .el-table-footer-wrapper td {
     border-bottom: 1px solid #EBEEF5;
