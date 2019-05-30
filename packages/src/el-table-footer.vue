@@ -19,7 +19,8 @@
         :data="data"
         fixed="left"
         ref="fixedLeftFooter"
-      ></table-footer>
+      >
+      </table-footer>
     </div>
     <div
       class="el-table-footer"
@@ -105,7 +106,7 @@ export default {
 }
 </script>
 
-<style type="text/scss" lang="scss">
+<style>
   .el-table-footer-wrapper {
     position: relative;
     overflow: hidden;

@@ -18,9 +18,7 @@
         :key="column.id"
         :class="getRowClasses(column, cellIndex)"
       >
-        <div :class="['cell', column.labelClassName]">
-          {{cellIndex === 0 ? row.label : row.data[column.property]}}
-        </div>
+        <render-cell :row="row" :column="column" :cellIndex="cellIndex" :cell="$parent.$scopedSlots[column.property]"></render-cell>
       </td>
       <th v-if="hasGutter" class="gutter"></th>
     </tr>
@@ -29,10 +27,14 @@
 </template>
 
 <script>
+import RenderCell from './render-cell'
 import { Table } from 'element-ui'
 import LayoutObserver from 'element-ui/packages/table/src/layout-observer'
 
 export default {
+  components: {
+    RenderCell
+  },
   props: {
     data: {
       type: Array,
