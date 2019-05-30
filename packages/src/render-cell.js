@@ -7,7 +7,6 @@ export default {
       class: [labelClassName],
       staticClass: 'cell'
     }
-    console.log(row)
 
     if (cellIndex === 0) {
       return h(cellTag, cellProps, [row.label])
